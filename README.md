@@ -10,7 +10,7 @@
 
 **Transform your resume into an ATS powerhouse with AI-driven insights powered by Google Gemini 2.5**
 
-[Live Demo](#) • [Documentation](#) • [Issues](https://github.com/yourusername/ats_score/issues)
+[Live Demo](https://ats-quick.vercel.app/) 
 
 </div>
 
@@ -593,9 +593,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙋 Support
 
 Have questions or need help?
-- 📧 Email: support@atsquick.com
-- 🐛 [Report Issues](https://github.com/yourusername/ats_score/issues)
-- 💬 [Discussions](https://github.com/yourusername/ats_score/discussions)
+- 📧 Email: dakshat75@gmail.com
 
 ---
 
