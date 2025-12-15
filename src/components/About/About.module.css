@@ -1,0 +1,340 @@
+/* ===== ABOUT SECTION (MOBILE FIRST) ===== */
+.aboutSection {
+  padding: 64px 16px;
+  position: relative;
+  margin-top: 24px;
+}
+
+/* ===== MOBILE GRID (SINGLE COLUMN) ===== */
+.grid {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+/* ===== CONTENT (MOBILE FIRST) ===== */
+.content {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  order: 2; /* Content appears second on mobile */
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.paragraph {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ===== STEPS (MOBILE) ===== */
+.step {
+  display: flex;
+  gap: 14px;
+  margin-top: 8px;
+  padding: 12px 0;
+}
+
+.stepNumber {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.stepTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+/* ===== LOTTIE ANIMATION (MOBILE FIRST) ===== */
+.visual {
+  grid-column: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 1; /* Animation appears first on mobile */
+  width: 100%;
+}
+
+.lottieCard {
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lottie {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================================================
+   SMALL MOBILE (320px - 480px)
+========================================================= */
+@media (min-width: 320px) and (max-width: 480px) {
+  .aboutSection {
+    padding: 56px 12px;
+    margin-top: 16px;
+  }
+
+  .grid {
+    gap: 24px;
+  }
+
+  .content {
+    gap: 14px;
+  }
+
+  .title {
+    font-size: 1.35rem;
+    line-height: 1.25;
+    margin-bottom: 6px;
+  }
+
+  .paragraph {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .step {
+    gap: 12px;
+    margin-top: 6px;
+    padding: 10px 0;
+  }
+
+  .stepNumber {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+
+  .stepTitle {
+    font-size: 0.95rem;
+    margin-bottom: 3px;
+  }
+
+  .lottieCard {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+/* =========================================================
+   MOBILE (481px - 640px)
+========================================================= */
+@media (min-width: 481px) and (max-width: 640px) {
+  .aboutSection {
+    padding: 60px 16px;
+    margin-top: 20px;
+  }
+
+  .grid {
+    gap: 28px;
+  }
+
+  .content {
+    gap: 15px;
+  }
+
+  .title {
+    font-size: 1.45rem;
+    line-height: 1.28;
+    margin-bottom: 8px;
+  }
+
+  .paragraph {
+    font-size: 0.93rem;
+    line-height: 1.55;
+  }
+
+  .step {
+    gap: 13px;
+    margin-top: 8px;
+  }
+
+  .stepNumber {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  .stepTitle {
+    font-size: 0.98rem;
+  }
+
+  .lottieCard {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+/* =========================================================
+   TABLET (641px - 1024px)
+========================================================= */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .aboutSection {
+    padding: 80px 24px;
+    margin-top: 24px;
+  }
+
+  .grid {
+    max-width: 900px;
+    gap: 48px;
+    grid-template-columns: 1fr;
+  }
+
+  /* Animation moves to end on tablet+ */
+  .visual {
+    order: 2;
+  }
+
+  .content {
+    order: 1;
+    gap: 18px;
+  }
+
+  .title {
+    font-size: 1.85rem;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .step {
+    gap: 15px;
+    margin-top: 10px;
+    padding: 12px 0;
+  }
+
+  .stepNumber {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+
+  .stepTitle {
+    font-size: 1.08rem;
+    margin-bottom: 5px;
+  }
+
+  .lottieCard {
+    width: 380px;
+    height: 380px;
+  }
+}
+
+/* =========================================================
+   DESKTOP (1025px and above)
+========================================================= */
+@media (min-width: 1025px) {
+  .aboutSection {
+    padding: 120px 32px;
+    margin-top: 24px;
+  }
+
+  .grid {
+    max-width: 1200px;
+    margin-bottom: -48px;
+
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 72px;
+    align-items: center;
+  }
+
+  /* Desktop: Lottie on left, content on right */
+  .visual {
+    grid-column: 1;
+    order: initial;
+  }
+
+  .content {
+    grid-column: 2;
+    order: initial;
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .paragraph {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .step {
+    gap: 16px;
+    margin-top: 12px;
+    padding: 0;
+  }
+
+  .stepNumber {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .stepTitle {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+  }
+
+  .lottieCard {
+    width: 420px;
+    height: 420px;
+  }
+}
+
+/* =========================================================
+   LARGE DESKTOP (1400px+)
+========================================================= */
+@media (min-width: 1400px) {
+  .grid {
+    max-width: 1400px;
+    gap: 80px;
+  }
+
+  .lottieCard {
+    width: 480px;
+    height: 480px;
+  }
+
+  .title {
+    font-size: 2.6rem;
+  }
+}

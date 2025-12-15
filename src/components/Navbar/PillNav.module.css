@@ -1,0 +1,260 @@
+/* ===== DESKTOP CONTAINER ===== */
+.container {
+  position: absolute;
+  top: 28px;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+}
+
+/* ===== DESKTOP NAV ===== */
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== DESKTOP PILL GROUP (GLASS) ===== */
+.list {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+  margin: 0;
+
+  background: rgba(18, 24, 38, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ===== DESKTOP PILL ===== */
+.pill {
+  position: relative;
+  height: 40px;
+  padding: 0 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9999px;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/* ===== HOVER SHAPE (DESKTOP) ===== */
+.hoverCircle {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  background: rgba(18, 24, 38, 0.95);
+
+  border-radius: 50%;
+  z-index: 1;
+
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* ===== LABEL STACK (DESKTOP) ===== */
+.labelStack {
+  position: relative;
+  z-index: 2;
+  line-height: 1;
+}
+
+.label {
+  display: inline-block;
+  will-change: transform;
+}
+
+.labelHover {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  color: #ffffff;
+  opacity: 0;
+
+  will-change: transform, opacity;
+}
+
+/* ===== DESKTOP ACTIVE INDICATOR ===== */
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* =========================================================
+   MOBILE STYLES (768px and below)
+========================================================= */
+
+/* ===== MOBILE CONTAINER ===== */
+.mobileContainer {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 50;
+}
+
+/* ===== HAMBURGER BUTTON ===== */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  width: 44px;
+  height: 44px;
+
+  background: rgba(18, 24, 38, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+
+  color: var(--text-primary);
+}
+
+.hamburger:hover {
+  background: rgba(18, 24, 38, 0.75);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.hamburgerLine {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Hamburger animation - open state */
+.hamburger.open .hamburgerLine:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.open .hamburgerLine:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-4px);
+}
+
+.hamburger.open .hamburgerLine:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ===== MOBILE NAVIGATION MENU ===== */
+.mobileNav {
+  position: fixed;
+  top: 60px;
+  right: 16px;
+
+  background: rgba(18, 24, 38, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+
+  min-width: 200px;
+  max-width: 280px;
+
+  opacity: 0;
+  transform: translateY(-10px) scale(0.95);
+  pointer-events: none;
+
+  transition: all 0.3s ease;
+  z-index: 49;
+}
+
+.mobileNav.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* ===== MOBILE LIST ===== */
+.mobileList {
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ===== MOBILE LINKS ===== */
+.mobileLink {
+  display: block;
+  padding: 12px 20px;
+
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+
+  transition: all 0.2s ease;
+
+  border-left: 3px solid transparent;
+}
+
+.mobileLink:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* ===== MOBILE ACTIVE INDICATOR ===== */
+.mobileLink.mobileActive {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-left-color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== HIDE DESKTOP NAV ON MOBILE ===== */
+@media (max-width: 767px) {
+  .container {
+    display: none;
+  }
+}
+
+/* ===== SHOW DESKTOP NAV ON 768px+ ===== */
+@media (min-width: 768px) {
+  .mobileContainer {
+    display: none;
+  }
+}

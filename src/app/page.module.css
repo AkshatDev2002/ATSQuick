@@ -1,0 +1,318 @@
+/* ===== PAGE CONTAINER (MOBILE FIRST) ===== */
+.container {
+  position: relative;
+  min-height: 100vh;
+  background: transparent;
+
+  display: flex;
+  flex-direction: column;
+
+  /* Mobile padding */
+  padding: 80px 16px 64px;
+  overflow: hidden;
+
+  margin-bottom: 12px;
+}
+
+/* ===== HEADER / LOGO ===== */
+.header {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  z-index: 5;
+}
+
+.logo {
+  display: block;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+  /* Scale logo for mobile */
+  width: 80px;
+  height: auto;
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+/* ===== HERO GRID (MOBILE FIRST - SINGLE COLUMN) ===== */
+.heroGrid {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 32px;
+
+  padding: 0;
+}
+
+/* ===== LEFT SIDE (MOBILE CENTERED) ===== */
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  z-index: 2;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  width: 100%;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ===== RIGHT SIDE (HIDDEN ON MOBILE) ===== */
+.right {
+  display: none;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* ===== GLASS VIDEO CARD ===== */
+.previewStack {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-right: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.02)
+    ),
+    rgba(255, 255, 255, 0.04);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 40px 80px rgba(0, 0, 0, 0.5);
+
+  overflow: hidden;
+}
+
+.previewStack::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    600px circle at top left,
+    rgba(99, 102, 241, 0.25),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.previewVideo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: inherit;
+  aspect-ratio: 16 / 9;
+}
+
+/* =========================================================
+   TABLET BREAKPOINT (641px - 900px)
+========================================================= */
+@media (min-width: 641px) {
+  .container {
+    padding: 100px 24px 72px;
+  }
+
+  .header {
+    top: 16px;
+    left: 24px;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .heroGrid {
+    max-width: 1000px;
+    gap: 40px;
+  }
+
+  .left {
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+  }
+
+  .eyebrow {
+    font-size: 0.9rem;
+    letter-spacing: 0.13em;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    line-height: 1.15;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* VIDEO STILL HIDDEN ON TABLET */
+  .right {
+    display: none;
+  }
+}
+
+/* =========================================================
+   DESKTOP BREAKPOINT (901px and above)
+========================================================= */
+@media (min-width: 901px) {
+  .container {
+    padding: 120px 32px 80px;
+  }
+
+  .header {
+    top: 16px;
+    left: 32px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  /* DESKTOP: TWO-COLUMN LAYOUT */
+  .heroGrid {
+    max-width: 1200px;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 64px;
+  }
+
+  /* DESKTOP: LEFT SIDE - LEFT-ALIGNED */
+  .left {
+    align-items: flex-start;
+    text-align: left;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .eyebrow {
+    font-size: 1rem;
+    letter-spacing: 0.14em;
+  }
+
+  .title {
+    font-size: 3.2rem;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    max-width: 600px;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+    max-width: 520px;
+    margin: 0;
+  }
+
+  /* DESKTOP: SHOW VIDEO */
+  .right {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* DESKTOP: VIDEO DIMENSIONS */
+  @media (min-width: 901px) {
+  .previewStack {
+    width: 720px;
+    height: 480px;
+    margin-right: -120px;
+    border-radius: 24px;
+  }
+
+  .previewVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP (1400px+) - FINE TUNING
+========================================================= */
+@media (min-width: 1400px) {
+  .container {
+    padding: 120px 48px 80px;
+  }
+
+  .heroGrid {
+    max-width: 1400px;
+    gap: 80px;
+  }
+}
+
+/* =========================================================
+   SMALL DEVICES (320px - 480px) - EXTRA SMALL OPTIMIZATION
+========================================================= */
+@media (max-width: 480px) {
+  .container {
+    padding: 70px 12px 56px;
+  }
+
+  .header {
+    top: 8px;
+    left: 12px;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  .heroGrid {
+    gap: 24px;
+  }
+
+  .left {
+    gap: 14px;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}}

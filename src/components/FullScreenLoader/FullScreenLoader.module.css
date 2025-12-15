@@ -1,0 +1,209 @@
+/* ===== OVERLAY (MOBILE FIRST) ===== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(10, 10, 25, 0.98),
+    rgba(3, 3, 12, 0.99)
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: all;
+
+  padding: 16px;
+  overflow: hidden;
+}
+
+/* ===== CONTENT (MOBILE FIRST) ===== */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ===== LOTTIE ANIMATION (MOBILE FIRST) ===== */
+.lottie {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+/* ===== TEXT (MOBILE FIRST) ===== */
+.text {
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  opacity: 0.9;
+  text-align: center;
+  max-width: 85vw;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   SMALL MOBILE (320px - 480px)
+========================================================= */
+@media (min-width: 320px) and (max-width: 480px) {
+  .overlay {
+    padding: 12px;
+  }
+
+  .content {
+    gap: 14px;
+  }
+
+  .lottie {
+    width: 160px;
+    height: 160px;
+  }
+
+  .text {
+    font-size: 0.85rem;
+    max-width: 90vw;
+    line-height: 1.4;
+  }
+}
+
+/* =========================================================
+   MOBILE (481px - 640px)
+========================================================= */
+@media (min-width: 481px) and (max-width: 640px) {
+  .overlay {
+    padding: 14px;
+  }
+
+  .content {
+    gap: 16px;
+  }
+
+  .lottie {
+    width: 220px;
+    height: 220px;
+  }
+
+  .text {
+    font-size: 0.9rem;
+    max-width: 85vw;
+    line-height: 1.5;
+  }
+}
+
+/* =========================================================
+   TABLET (641px - 1024px)
+========================================================= */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .overlay {
+    padding: 20px;
+  }
+
+  .content {
+    gap: 18px;
+  }
+
+  .lottie {
+    width: 380px;
+    height: 380px;
+  }
+
+  .text {
+    font-size: 0.95rem;
+    max-width: 80vw;
+    line-height: 1.6;
+  }
+}
+
+/* =========================================================
+   DESKTOP (1025px - 1399px)
+========================================================= */
+@media (min-width: 1025px) and (max-width: 1399px) {
+  .overlay {
+    padding: 24px;
+  }
+
+  .content {
+    gap: 20px;
+  }
+
+  .lottie {
+    width: 600px;
+    height: 600px;
+  }
+
+  .text {
+    font-size: 1rem;
+    max-width: 70vw;
+    line-height: 1.6;
+  }
+}
+
+/* =========================================================
+   LARGE DESKTOP (1400px and above)
+========================================================= */
+@media (min-width: 1400px) {
+  .overlay {
+    padding: 32px;
+  }
+
+  .content {
+    gap: 20px;
+  }
+
+  .lottie {
+    width: 880px;
+    height: 880px;
+  }
+
+  .text {
+    font-size: 1.05rem;
+    max-width: 60vw;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .overlay {
+    animation: none;
+  }
+
+  .lottie {
+    animation: none;
+  }
+}
+
+/* =========================================================
+   LANDSCAPE ORIENTATION (SHORT VIEWPORT HEIGHT)
+========================================================= */
+@media (max-height: 600px) {
+  .overlay {
+    padding: 12px;
+  }
+
+  .content {
+    gap: 12px;
+  }
+
+  .lottie {
+    width: min(150px, 40vh);
+    height: min(150px, 40vh);
+  }
+
+  .text {
+    font-size: 0.85rem;
+    max-width: 90vw;
+  }
+}
