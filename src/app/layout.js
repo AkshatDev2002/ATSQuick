@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 
 
 export const metadata = {
-  metadataBase: new URL("https://ai-resume-analyzer.vercel.app"),
+  metadataBase: new URL("https://ats-quick.vercel.app/"),
 
   title: {
     default:
@@ -73,11 +73,11 @@ export const metadata = {
       "ATSQuick – Free ATS Resume Check in Seconds",
     description:
       "Upload your resume and get an AI-powered ATS score, skill analysis, and job match insights in seconds.",
-    url: "https://ai-resume-analyzer.vercel.app",
+    url: "https://ats-quick.vercel.app/",
     siteName: "ATSQuick – Free ATS Resume Check in Seconds",
     images: [
       {
-        url: "/logo.png",
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "AI Resume Score Analyzer Dashboard",
