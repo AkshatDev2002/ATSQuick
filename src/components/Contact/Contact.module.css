@@ -53,25 +53,27 @@
 /* ===== HEADER ROW (MOBILE) ===== */
 .headerRow {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 24px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .title {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: var(--text-primary);
+  flex: 1;
 }
 
-/* ===== INLINE LOTTIE (MOBILE) ===== */
 .lottieInline {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   flex-shrink: 0;
-  align-self: flex-end;
+  align-self: center;
 }
+
 
 /* ===== FORM (MOBILE FIRST) ===== */
 .form {
@@ -370,23 +372,28 @@
   }
 
   .headerRow {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 28px;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
 
-  .title {
-    font-size: 2rem;
-  }
+.title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  flex: 1;
+}
 
-  .lottieInline {
-    width: 120px;
-    height: 120px;
-    flex-shrink: 0;
-    align-self: auto;
-  }
+.lottieInline {
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
 
   .form {
     gap: 14px;
